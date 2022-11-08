@@ -14,6 +14,7 @@ export declare class Currency {
     static readonly ETHER: {
         1: Currency;
         4: Currency;
+        10: Currency;
         56: Currency;
         250: Currency;
         43114: Currency;
@@ -29,6 +30,7 @@ export declare class Currency {
 declare const ETHER: {
     1: Currency;
     4: Currency;
+    10: Currency;
     56: Currency;
     250: Currency;
     43114: Currency;

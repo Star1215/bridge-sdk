@@ -28,6 +28,7 @@ export declare function currencyEquals(currencyA: Currency, currencyB: Currency)
 export declare const WETH: {
     1: Token;
     4: Token;
+    10: Token;
     56: Token;
     250: Token;
     43114: Token;

@@ -3,6 +3,7 @@ export declare type BigintIsh = JSBI | number | string;
 export declare enum ChainId {
     MAINNET = 1,
     RINKEBY = 4,
+    OPTIMISM = 10,
     BSC = 56,
     FANTOM = 250,
     AVALANCHE = 43114
@@ -20,6 +21,7 @@ export declare const FACTORY_ADDRESS = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA
 export declare const FACTORY_ADDRESS_MAP: {
     1: string;
     4: string;
+    10: string;
     56: string;
     250: string;
     43114: string;
@@ -28,6 +30,7 @@ export declare const INIT_CODE_HASH = "0x96e8ac4277198ff8b6f785478aa9a39f403cb76
 export declare const INIT_CODE_HASH_MAP: {
     1: string;
     4: string;
+    10: string;
     56: string;
     250: string;
     43114: string;
@@ -43,6 +46,7 @@ export declare const _100: JSBI;
 export declare const FEES_NUMERATOR: {
     1: JSBI;
     4: JSBI;
+    10: JSBI;
     56: JSBI;
     250: JSBI;
     43114: JSBI;

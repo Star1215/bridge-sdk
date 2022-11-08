@@ -17,6 +17,7 @@ var ChainId;
 (function (ChainId) {
   ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
   ChainId[ChainId["RINKEBY"] = 4] = "RINKEBY";
+  ChainId[ChainId["OPTIMISM"] = 10] = "OPTIMISM";
   ChainId[ChainId["BSC"] = 56] = "BSC";
   ChainId[ChainId["FANTOM"] = 250] = "FANTOM";
   ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
@@ -38,9 +39,9 @@ var Rounding;
 })(Rounding || (Rounding = {}));
 
 var FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f';
-var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[ChainId.RINKEBY] = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f', _FACTORY_ADDRESS_MAP[ChainId.BSC] = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73', _FACTORY_ADDRESS_MAP[ChainId.FANTOM] = '0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3', _FACTORY_ADDRESS_MAP[ChainId.AVALANCHE] = '0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10', _FACTORY_ADDRESS_MAP);
+var FACTORY_ADDRESS_MAP = (_FACTORY_ADDRESS_MAP = {}, _FACTORY_ADDRESS_MAP[ChainId.MAINNET] = FACTORY_ADDRESS, _FACTORY_ADDRESS_MAP[ChainId.RINKEBY] = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f', _FACTORY_ADDRESS_MAP[ChainId.BSC] = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73', _FACTORY_ADDRESS_MAP[ChainId.FANTOM] = '0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3', _FACTORY_ADDRESS_MAP[ChainId.AVALANCHE] = '0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10', _FACTORY_ADDRESS_MAP[ChainId.OPTIMISM] = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f', _FACTORY_ADDRESS_MAP);
 var INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
-var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[ChainId.RINKEBY] = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f', _INIT_CODE_HASH_MAP[ChainId.BSC] = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5', _INIT_CODE_HASH_MAP[ChainId.FANTOM] = '0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2', _INIT_CODE_HASH_MAP[ChainId.AVALANCHE] = '0x0bbca9af0511ad1a1da383135cf3a8d2ac620e549ef9f6ae3a4c33c2fed0af91', _INIT_CODE_HASH_MAP);
+var INIT_CODE_HASH_MAP = (_INIT_CODE_HASH_MAP = {}, _INIT_CODE_HASH_MAP[ChainId.MAINNET] = INIT_CODE_HASH, _INIT_CODE_HASH_MAP[ChainId.RINKEBY] = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f', _INIT_CODE_HASH_MAP[ChainId.BSC] = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5', _INIT_CODE_HASH_MAP[ChainId.FANTOM] = '0xcdf2deca40a0bd56de8e3ce5c7df6727e5b1bf2ac96f283fa9c4b3e6b42ea9d2', _INIT_CODE_HASH_MAP[ChainId.AVALANCHE] = '0x0bbca9af0511ad1a1da383135cf3a8d2ac620e549ef9f6ae3a4c33c2fed0af91', _INIT_CODE_HASH_MAP[ChainId.AVALANCHE] = '0x0bbca9af0511ad1a1da383135cf3a8d2ac620e549ef9f6ae3a4c33c2fed0af91', _INIT_CODE_HASH_MAP);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -50,7 +51,7 @@ var THREE = /*#__PURE__*/JSBI.BigInt(3);
 var FIVE = /*#__PURE__*/JSBI.BigInt(5);
 var TEN = /*#__PURE__*/JSBI.BigInt(10);
 var _100 = /*#__PURE__*/JSBI.BigInt(100);
-var FEES_NUMERATOR = (_FEES_NUMERATOR = {}, _FEES_NUMERATOR[ChainId.MAINNET] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR[ChainId.RINKEBY] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR[ChainId.BSC] = /*#__PURE__*/JSBI.BigInt(9975), _FEES_NUMERATOR[ChainId.FANTOM] = /*#__PURE__*/JSBI.BigInt(9980), _FEES_NUMERATOR[ChainId.AVALANCHE] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR);
+var FEES_NUMERATOR = (_FEES_NUMERATOR = {}, _FEES_NUMERATOR[ChainId.MAINNET] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR[ChainId.RINKEBY] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR[ChainId.BSC] = /*#__PURE__*/JSBI.BigInt(9975), _FEES_NUMERATOR[ChainId.FANTOM] = /*#__PURE__*/JSBI.BigInt(9980), _FEES_NUMERATOR[ChainId.AVALANCHE] = /*#__PURE__*/JSBI.BigInt(9970), _FEES_NUMERATOR[ChainId.OPTIMISM] = /*#__PURE__*/JSBI.BigInt(9980), _FEES_NUMERATOR);
 var FEE_PROTOCOL_OUT = /*#__PURE__*/JSBI.BigInt(9990);
 var FEES_DENOMINATOR = /*#__PURE__*/JSBI.BigInt(10000);
 var SolidityType;
@@ -375,7 +376,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = (_Currency$ETHER = {}, _Currency$ETHER[ChainId.MAINNET] = /*#__PURE__*/new Currency(18, 'ETH', 'ETH'), _Currency$ETHER[ChainId.RINKEBY] = /*#__PURE__*/new Currency(18, 'ETH', 'ETH'), _Currency$ETHER[ChainId.BSC] = /*#__PURE__*/new Currency(18, 'BNB', 'BNB'), _Currency$ETHER[ChainId.FANTOM] = /*#__PURE__*/new Currency(18, 'FTM', 'FTM'), _Currency$ETHER[ChainId.AVALANCHE] = /*#__PURE__*/new Currency(18, 'AVAX', 'AVAX'), _Currency$ETHER);
+Currency.ETHER = (_Currency$ETHER = {}, _Currency$ETHER[ChainId.MAINNET] = /*#__PURE__*/new Currency(18, 'ETH', 'ETH'), _Currency$ETHER[ChainId.OPTIMISM] = /*#__PURE__*/new Currency(18, 'ETHER', 'ETHER'), _Currency$ETHER[ChainId.RINKEBY] = /*#__PURE__*/new Currency(18, 'ETH', 'ETH'), _Currency$ETHER[ChainId.BSC] = /*#__PURE__*/new Currency(18, 'BNB', 'BNB'), _Currency$ETHER[ChainId.FANTOM] = /*#__PURE__*/new Currency(18, 'FTM', 'FTM'), _Currency$ETHER[ChainId.AVALANCHE] = /*#__PURE__*/new Currency(18, 'AVAX', 'AVAX'), _Currency$ETHER);
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -442,7 +443,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether', 'https://ethereum.org'), _WETH[ChainId.RINKEBY] = /*#__PURE__*/new Token(ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether', 'https://ethereum.org'), _WETH[ChainId.BSC] = /*#__PURE__*/new Token(ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://binance.org'), _WETH[ChainId.FANTOM] = /*#__PURE__*/new Token(ChainId.FANTOM, '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18, 'WFTM', 'Wrapped Fantom', 'https://fantom.org'), _WETH[ChainId.AVALANCHE] = /*#__PURE__*/new Token(ChainId.AVALANCHE, '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18, 'WAVAX', 'Wrapped AVAX', 'https://www.avax.network'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether', 'https://ethereum.org'), _WETH[ChainId.RINKEBY] = /*#__PURE__*/new Token(ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether', 'https://ethereum.org'), _WETH[ChainId.BSC] = /*#__PURE__*/new Token(ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://binance.org'), _WETH[ChainId.FANTOM] = /*#__PURE__*/new Token(ChainId.FANTOM, '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18, 'WFTM', 'Wrapped Fantom', 'https://fantom.org'), _WETH[ChainId.AVALANCHE] = /*#__PURE__*/new Token(ChainId.AVALANCHE, '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18, 'WAVAX', 'Wrapped AVAX', 'https://www.avax.network'), _WETH, _WETH[ChainId.OPTIMISM] = /*#__PURE__*/new Token(ChainId.OPTIMISM, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETHER', 'https://www.optimism.io/'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
